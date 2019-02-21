@@ -1,0 +1,26 @@
+How to approach Design Questions:  Grokking the System Design Interview
+ 
+1. Requirements clarification :
+    Functional : (how should it work) 
+    Non-functional : (backend, actual system) 
+       SQL : 
+          ACID (Atomicity, consistency, isolation, durability)
+       Distributed:
+Scalability
+Reliability
+Availability
+Efficiency : Latency & Bandwidth
+Manageability
+       CAP (consistency, availability, partition tolerance: only 2 at a time )
+2. System interface definition: what Apis do we want to use ? REST/SOAP; prevent abuse by limiting users per usage.
+3. Capacity estimation : scale? how much storage we need? different storage needs
+        SBTM
+        1. Storage estimate : 
+        2. Bandwidth estimate: reads vs writes
+        3. Traffic estimate : Queries per second
+	4. Memory estimate
+4. Defining data model :how data will flow?
+5. High level design : block diagram; reads vs writes; load balancers, traffic distribution; Distributed file storage
+6. Detailed design : database schema ; hdfs; cassandra; 
+7. Bottlenecks: single points of failure? replicas? non-uniform distribution of sharing/keys/md hashes 
+
